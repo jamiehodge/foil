@@ -1,0 +1,12 @@
+require_relative 'model/annotation'
+require_relative 'model/category'
+require_relative 'model/discourse'
+require_relative 'model/file'
+require_relative 'model/folder'
+require_relative 'model/group'
+require_relative 'model/language'
+require_relative 'model/license'
+require_relative 'model/link'
+require_relative 'model/person'
+require_relative 'model/tag'
+

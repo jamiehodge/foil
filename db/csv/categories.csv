@@ -1,0 +1,165 @@
+100,,Business
+100,1,Economics
+107,1,Entrepreneurship
+101,1,Finance
+102,1,Hospitality
+103,1,Management
+104,1,Marketing
+105,1,Personal Finance
+106,1,Real Estate
+101,,Engineering
+100,2,Chemical & Petroleum Engineering
+101,2,Civil Engineering
+102,2,Computer Science
+103,2,Electrical Engineering
+104,2,Environmental Engineering
+105,2,Mechanical Engineering
+102,,Art & Architecture
+100,3,Architecture
+102,3,Art History
+109,3,Culinary Arts
+103,3,Dance
+105,3,Design
+111,3,Fashion
+104,3,Film
+106,3,Interior Design
+112,3,Media Arts
+107,3,Music
+113,3,Photography
+108,3,Theater
+110,3,Visual Art
+103,,Health & Medicine
+100,4,Anatomy & Physiology
+101,4,Behavioral Science
+102,4,Dentistry
+103,4,Diet & Nutrition
+104,4,Emergency Medicine
+105,4,Genetics
+106,4,Gerontology
+112,4,Global Health
+107,4,Health & Exercise Science
+108,4,Immunology
+109,4,Neuroscience
+114,4,Nursing
+110,4,Pharmacology & Toxicology
+111,4,Psychiatry
+113,4,Radiology
+104,,History
+104,5,African History
+100,5,Ancient History
+105,5,Asia-Pacific History
+106,5,European History
+101,5,Medieval History
+107,5,Middle Eastern History
+102,5,Military History
+103,5,Modern History
+108,5,North American History
+109,5,South American History
+106,,Language
+100,6,African Languages
+101,6,Ancient Languages
+114,6,Arabic
+113,6,Chinese
+104,6,English
+106,6,French
+107,6,German
+115,6,Hebrew
+116,6,Hindi
+117,6,Indigenous Languages
+108,6,Italian
+118,6,Japanese
+119,6,Korean
+109,6,Linguistics
+120,6,Other Languages
+121,6,Portuguese
+122,6,Russian
+111,6,Spanish
+112,6,Speech Pathology
+107,,Literature
+100,7,Anthologies
+101,7,Biography
+102,7,Classics
+106,7,Comparative Literature
+104,7,Fiction
+103,7,Literary Criticism
+105,7,Poetry
+108,,Mathematics
+100,8,Advanced Mathematics
+101,8,Algebra
+102,8,Arithmetic
+103,8,Calculus
+104,8,Geometry
+105,8,Statistics
+109,,Science
+100,9,Agriculture
+101,9,Astronomy
+102,9,Atmosphere
+103,9,Biology
+104,9,Chemistry
+105,9,Ecology
+109,9,Environment
+106,9,Geography
+107,9,Geology
+108,9,Physics
+110,,Psychology & Social Science
+107,10,Anthropology
+106,10,Archaeology
+103,10,Psychology
+104,10,Social Welfare
+105,10,Sociology
+111,,Society
+107,11,African Studies
+108,11,American Studies
+101,11,Asia Pacific Studies
+109,11,Cross-cultural Studies
+102,11,European Studies
+110,11,Immigration & Emigration
+103,11,Indigenous Studies
+104,11,Latin & Caribbean Studies
+105,11,Middle Eastern Studies
+111,11,Race & Ethnicity Studies
+112,11,Sexuality Studies
+106,11,Women's Studies
+112,,Teaching & Learning
+100,12,Curriculum & Teaching
+101,12,Educational Leadership
+106,12,Educational Technology
+102,12,Family & Childcare
+107,12,Information/Library Science
+103,12,Learning Resources
+104,12,Psychology & Research
+105,12,Special Education
+113,,Communications & Media
+101,13,Broadcasting
+102,13,Digital Media
+103,13,Journalism
+104,13,Photojournalism
+105,13,Print
+106,13,Speech
+107,13,Writing
+114,,Philosophy
+100,14,Aesthetics
+101,14,Epistemology
+102,14,Ethics
+105,14,Logic
+103,14,Metaphysics
+106,14,Philosophy of Language
+107,14,Philosophy of Religion
+104,14,Political Philosophy
+115,,Religion & Spirituality
+100,15,Buddhism
+101,15,Christianity
+102,15,Comparative Religion
+103,15,Hinduism
+104,15,Islam
+105,15,Judaism
+106,15,Other Religions
+107,15,Spirituality
+116,,Law & Politics
+100,16,Foreign Policy & International Relations
+101,16,Law
+102,16,Local Governments
+103,16,National Governments
+104,16,Political Science
+105,16,Public Administration
+106,16,World Affairs
