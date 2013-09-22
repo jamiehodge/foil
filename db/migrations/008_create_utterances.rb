@@ -9,6 +9,7 @@ Sequel.migration do
 
       foreign_key :discourse_id, :discourses, index: true, null: false, on_delete: :cascade
       foreign_key :file_id, :files, index: true, null: false, on_delete: :cascade
+      foreign_key :parent_id, :utterances, index: true, on_delete: :cascade
 
       text :person_id, null: false
       text :note, null: false
