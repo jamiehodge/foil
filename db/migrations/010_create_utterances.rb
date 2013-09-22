@@ -4,7 +4,7 @@ Sequel.migration do
   change do
     extension :pg_range
 
-    create_table :annotations do
+    create_table :utterances do
       primary_key :id
 
       foreign_key :discourse_id, :discourses, index: true, null: false, on_delete: :cascade
