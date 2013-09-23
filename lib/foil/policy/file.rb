@@ -5,7 +5,7 @@ module Foil
   module Policy
     class File < Base
       def scope(model = Model::File)
-        super || model.authored_by(person).union(permitted(person))
+        super || model.authored_by(person).union(model.permitted(person))
       end
 
       def write?(record)
