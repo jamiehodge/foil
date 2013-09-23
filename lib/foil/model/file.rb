@@ -11,10 +11,6 @@ module Foil
       one_to_many :group_file_permissions
       one_to_many :person_file_permissions
 
-      class << self
-        attr_accessor :storage
-      end
-
       def person_ids
         Sequel.pg_array(super || [])
       end

@@ -4,35 +4,48 @@ module Foil
   module Model
     module Storable
 
-      def file
-        @file ||= (storage[id] unless new?)
+      module ClassMethods
+        attr_writer :storage
+
+        def storage
+          @storage ||= Foil::Storage::Local.new(ENV['STORAGE_PATH'])
+        end
       end
 
-      def file=(value)
-        will_change_column :file
-        @file = value
+      module InstanceMethods
+        def file
+          @file ||= (storage[id] unless new?)
+        end
+
+        def file=(value)
+          will_change_column :file
+          @file = value
+        end
+
+        def after_create
+          super
+          storage[id] = file
+        end
+
+        def after_update
+          super
+          storage[id] = file if column_changed? :file
+        end
+
+        def after_destroy
+          super
+          storage.delete(id)
+        end
+
+        def storage
+          self.class.storage[self.class.table_name]
+        end
       end
 
-      def after_create
-        super
-        storage[id] = file
-      end
+      def self.included(base)
+        base.extend         ClassMethods
+        base.send :include, InstanceMethods
 
-      def after_update
-        super
-        storage[id] = file if column_changed? :file
-      end
-
-      def after_destroy
-        super
-        storage.delete(id)
-      end
-
-      def storage
-        self.class.storage[self.class.table_name]
-      end
-
-      def self.extended(base)
         base.plugin :dirty
       end
     end
