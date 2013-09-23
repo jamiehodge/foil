@@ -29,7 +29,7 @@ module Foil
       dataset_module do
 
         def authored_by(person)
-          where Sequel.pg_array(:person_ids).any(person)
+          where person.id => Sequel.pg_array(:person_ids).any
         end
 
         def permitted(person, action = 'read')
