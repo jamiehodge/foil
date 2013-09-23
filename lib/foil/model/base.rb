@@ -8,7 +8,9 @@ module Foil
     Base = Class.new(Sequel::Model)
 
     class Base
-      extend Listenable, Searchable, Storable
+      extend Listenable, Searchable
+
+      attr_accessor :storage
 
       self.raise_on_save_failure = false
       self.raise_on_typecast_failure = false

@@ -3,11 +3,17 @@ require_relative 'base'
 module Foil
   module Model
     class File < Base
+      include Storable
+
       many_to_one :category
       many_to_one :language
       many_to_one :license
       one_to_many :group_file_permissions
       one_to_many :person_file_permissions
+
+      class << self
+        attr_accessor :storage
+      end
 
       def person_ids
         Sequel.pg_array(super || [])
