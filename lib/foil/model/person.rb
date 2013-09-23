@@ -22,6 +22,10 @@ module Foil
         @mail         = attrs.fetch(:mail, '')
         @group_ids    = Array attrs[:group_ids]
       end
+
+      def admin?
+        group_ids.any? {|id| id == ENV['ADMIN_GROUP'] }
+      end
     end
   end
 end
