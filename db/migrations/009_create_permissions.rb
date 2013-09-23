@@ -28,27 +28,27 @@ Sequel.migration do
     end
 
     create_table :group_discourse_permissions, inherits: :discourse_permissions do
-      integer :group_id, null: false
+      text :group_id, null: false
     end
 
     create_table :person_discourse_permissions, inherits: :discourse_permissions do
-      integer :person_id, null: false
+      text :person_id, null: false
     end
 
     create_table :group_file_permissions, inherits: :file_permissions do
-      integer :group_id, null: false
+      text :group_id, null: false
     end
 
     create_table :person_file_permissions, inherits: :file_permissions do
-      integer :person_id, null: false
+      text :person_id, null: false
     end
 
     create_table :group_folder_permissions, inherits: :folder_permissions do
-      integer :group_id, null: false
+      text :group_id, null: false
     end
 
     create_table :person_folder_permissions, inherits: :folder_permissions do
-      integer :person_id, null: false
+      text :person_id, null: false
     end
   end
 end
