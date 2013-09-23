@@ -32,7 +32,7 @@ module Foil
           where person.id => Sequel.pg_array(:person_ids).any
         end
 
-        def permitted(person, action = 'read')
+        def permitted(person, action = :read)
           where id: GroupFilePermission.where(group_id: person.group_ids, action => true).select(:file_id)
             .union(PersonFilePermission.where(person_id: person.id, action => true).select(:file_id))
         end
