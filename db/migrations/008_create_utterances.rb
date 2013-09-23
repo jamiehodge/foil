@@ -1,5 +1,3 @@
-
-
 Sequel.migration do
   change do
     extension :pg_range
