@@ -1,26 +1,19 @@
 require_relative 'base'
-require_relative '../model/group_folder_permission'
-require_relative '../model/person_folder_permission'
+require_relative '../model/folder'
 
 module Foil
   module Policy
     class Folder < Base
-      def scope(model)
-        model
-          .where(id: GroupFolderPermission.where(group_id: person.group_ids).select(:id))
-          .union(PersonFolderPermission.where(person_id: person.id).select(:id))
+      def scope(model = Model::Folder)
+        super || model.permitted(person, :read)
       end
 
       def write?(record)
-        super ||
-        PersonFolderPermission.where(person_id: person.id, folder_id: record.id, write: true) ||
-        GroupFolderPermission.where(group_id: person.group_ids, folder_id: record.id, write: true)
+        super || record.permitted?(person, :write)
       end
 
       def delete?(record)
-        super ||
-        PersonFolderPermission.where(person_id: person.id, folder_id: record.id, delete: true) ||
-        GroupFolderPermission.where(group_id: person.group_ids, folder_id: record.id, delete: true)
+        super || record.permitted?(person, :delete)
       end
     end
   end

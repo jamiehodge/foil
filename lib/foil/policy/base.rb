@@ -8,8 +8,7 @@ module Foil
       end
 
       def scope(model)
-        return model if person.admin?
-        []
+        model if person.admin?
       end
 
       def write?(record)
