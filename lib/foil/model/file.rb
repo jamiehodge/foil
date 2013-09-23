@@ -8,6 +8,7 @@ module Foil
       many_to_one :category
       many_to_one :language
       many_to_one :license
+      one_to_many :issues
       one_to_many :group_file_permissions
       one_to_many :person_file_permissions
 
