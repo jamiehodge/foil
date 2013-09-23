@@ -3,7 +3,6 @@ Sequel.migration do
     create_table :permissions do
       primary_key :id
 
-      boolean :read,   default: true
       boolean :write,  default: false
       boolean :delete, default: false
 
