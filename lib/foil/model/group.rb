@@ -1,15 +1,14 @@
-class Foil
+require_relative 'entry'
+
+module Foil
   module Model
-    class Group
+    class Group < Entry
+      attr_reader :description, :person_ids
 
-      attr_reader :id
-
-      def self.[](id)
-        new(id: id)
-      end
-
-      def initialize(values)
-        @id = values.fetch(:id)
+      def initialize(attrs)
+        super
+        @description = attrs.fetch(:description, '')
+        @person_ids  = Array attrs[:person_ids]
       end
     end
   end

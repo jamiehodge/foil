@@ -1,15 +1,26 @@
+require_relative 'entry'
+
 module Foil
   module Model
-    class Person
-
-      attr_reader :id
-
-      def self.[](id)
-        new(id: id)
+    class Person < Entry
+      class << self
+        def authenticate(id, password)
+          entry = directory.authenticate(id, password)
+          new(entry.to_h) if entry
+        end
       end
 
-      def initialize(values)
-        @id = values.fetch(:id)
+      attr_reader :name, :title, :organization,
+        :department, :mail, :group_ids
+
+      def initialize(attrs)
+        super
+        @name         = attrs.fetch(:name, '')
+        @title        = attrs.fetch(:title, '')
+        @organization = attrs.fetch(:organization, '')
+        @department   = attrs.fetch(:department, '')
+        @mail         = attrs.fetch(:mail, '')
+        @group_ids    = Array attrs[:group_ids]
       end
     end
   end
